@@ -1,0 +1,54 @@
+═══════════════════════════════════════════════════════════════
+  START BACKEND SERVER - COPY AND PASTE THESE COMMANDS
+═══════════════════════════════════════════════════════════════
+
+STEP 1: Open a NEW Terminal Window
+  - Press Cmd+Space, type "Terminal", press Enter
+  - OR right-click desktop → New Terminal
+
+STEP 2: Copy and paste these EXACT commands (one at a time):
+
+cd "/Users/karthikkukkala/Desktop/Degital mental Health /backend"
+
+source venv/bin/activate
+
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+═══════════════════════════════════════════════════════════════
+
+WHAT YOU SHOULD SEE:
+
+INFO:     Uvicorn running on http://0.0.0.0:8000
+INFO:     Application startup complete.
+
+═══════════════════════════════════════════════════════════════
+
+VERIFY IT'S WORKING:
+
+1. Open browser: http://localhost:8000/api/health
+2. Should see: {"status":"healthy","version":"1.0.0"}
+
+═══════════════════════════════════════════════════════════════
+
+IMPORTANT:
+- Keep the terminal window OPEN
+- Don't close it - server must keep running
+- Press Ctrl+C to stop when done
+
+═══════════════════════════════════════════════════════════════
+
+IF YOU GET ERRORS:
+
+Error: "No module named 'uvicorn'"
+  → Run: pip install uvicorn fastapi
+
+Error: "No module named 'app'"
+  → Make sure you're in the backend folder
+  → Check: ls app/main.py
+
+Error: "Port already in use"
+  → Run: lsof -ti:8000 | xargs kill -9
+  → Then try again
+
+═══════════════════════════════════════════════════════════════
+
