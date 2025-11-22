@@ -13,25 +13,26 @@ If you've connected your GitHub repository to Vercel, it will automatically depl
 
 **Current Status:** ✅ Code pushed to GitHub - Vercel should auto-deploy
 
-### 2. Manual Configuration in Vercel Dashboard
+### 2. Manual Configuration in Vercel Dashboard (REQUIRED)
 
-If automatic deployment doesn't work, configure manually:
+**IMPORTANT:** You MUST configure the Root Directory in Vercel Dashboard:
 
 1. **Go to Vercel Project Settings:**
    - Visit: https://vercel.com/karthiksivasai/digital-mental-supporter/settings/general
 
-2. **Set Root Directory:**
+2. **Set Root Directory (CRITICAL STEP):**
    - Scroll to "Root Directory" section
    - Click "Edit"
    - Set to: `frontend`
    - Click "Save"
+   - **This step is REQUIRED - vercel.json cannot set rootDirectory**
 
 3. **Verify Build Settings:**
    - Go to "Build & Development Settings"
    - Framework Preset: `Next.js` (should auto-detect)
-   - Build Command: `npm run build` (default)
-   - Output Directory: `.next` (default)
-   - Install Command: `npm install` (default)
+   - Build Command: `npm run build` (default - vercel.json will override)
+   - Output Directory: `.next` (default - vercel.json will override)
+   - Install Command: `npm install` (default - vercel.json will override)
 
 ### 3. Environment Variables
 
