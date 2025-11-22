@@ -55,8 +55,8 @@ export default function Nav() {
             href="/dashboard" 
             className="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors"
           >
-            Digital Mental Supporter
-          </Link>
+              Digital Mental Supporter
+            </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
@@ -104,7 +104,7 @@ export default function Nav() {
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50">
                   <div className="px-3 py-2 border-b border-gray-100">
                     <p className="text-xs font-medium text-gray-900 truncate">{user?.email}</p>
-                    {user?.is_admin && (
+              {user?.is_admin && (
                       <p className="text-xs text-purple-600 mt-0.5">Administrator</p>
                     )}
                   </div>
